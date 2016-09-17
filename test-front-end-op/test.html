@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Optionizr">
+		<meta name="author" content="Optionizr">
+		<link href="bootstrap/css/bootstrap-flaty.min.css" rel="stylesheet" type="text/css"/>
+		<link href="owl-carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css"/>
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+		<style type="text/css">
+		.clear {
+			clear: both;
+		}
+		.footer{
+			margin-top: 50px;
+			border: 1px solid;
+    		border-radius: 10px;
+			height: 100px;
+			width: 100%;
+			background-color: #34495e;
+
+		}
+		@media (max-width: 992px) {
+			#recap-achat
+			{
+				margin-top: 5%;
+			}
+		}
+		</style>
+	</head>
+
+	<body>
+		<!-- main container -->
+		<div class="container">	
+			<!-- main navbar -->
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">Site Marchand</a>
+			    </div>
+
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">Voyages</span></a></li>
+			        <li><a href="#">Hôtels</a></li>
+			      </ul>
+			      <form class="navbar-form navbar-right" role="search">
+			        <div class="form-group">
+			          <input class="form-control" placeholder="Recherche" type="text">
+			        </div>
+			        <button type="submit" class="btn btn-default">Valider</button>
+			      </form>
+			    </div>
+			  </div>
+			</nav>
+			<!-- end main navbar -->
+			<!-- header optionizer -->
+			<div class="row">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+					<a href="#"><img src="img/logo.png" alt="logo Optionizr" width="100" style="float:left;"/></a>
+					<h1 style="color: #2980b9;">Optionizr</h1>
+				</div>
+			</div>
+			<!-- end header optionizer -->
+				<hr/>
+			<!-- container row breadcrumb -->
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="breadcrumb">
+					  <li><a href="#" style="color:#2980b9;">Accueil</a></li>
+					  <li><a href="#" style="color:#2980b9;">Options</a></li>
+					  <li class="active">Coordonnées de paiement</li>
+					</ul>
+					<h2 style="color: #2980b9; text-decoration: underline; margin-bottom: 30px;">Vos coordonnées</h2>
+				</div>
+			</div>
+			<!-- end container row breadcrumb -->
+			<!-- payment form -->
+			<div class="col-md-8" style="border: 1px solid #e6e6e6; box-shadow: 0px 0px 5px #e6e6e6; padding: 10px;">
+				<form method="get" action="#section2">
+					<div class="form-group">
+						<label>Nom</label>
+						<input type="text" class="form-control"/>
+					</div>	
+
+					<div class="form-group">
+						<label>Prénom</label>
+						<input type="text" class="form-control"/>
+					</div>	
+
+					<div class="form-group">
+						<label>Numéro de carte</label>
+						<input type="text" class="form-control"/>
+					</div>	
+
+					<div class="form-group">
+						<label>Exp MM/YY</label>
+						<input type="text" class="form-control"/>
+					</div>	
+
+					<div class="form-group">
+						<label>CVV</label>
+						<input type="text" class="form-control"/>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-3 text-center">
+							<div class=" text-center">
+								<input type="submit" class="btn btn-info btn-lg col-xs-12" value="Payer"/>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end payment form -->
+			<!-- booking info -->
+			<div class="col-md-4" id="recap-achat">
+				<div class="panel panel-info">
+				  <div class="panel-heading">
+				    <h3 class="panel-title text-center">Résumé de votre achat</h3>
+				  </div>
+				  <div class="panel-body">
+				  	<p style="color: #e74c3c;">Option vol Paris-Rio 28/05/2015</p>
+				  	<div class="carousel">
+				  		<img class="img-responsive" style="margin-bottom: 10px;" src="img/avion.jpg" alt="image carousel avion"/>
+				  		<img class="img-responsive" style="margin-bottom: 10px;" src="img/rio.jpg" alt="image carousel plage"/>
+				  		<img class="img-responsive" style="margin-bottom: 10px;" src="img/villa.jpg" alt="image carousel villa"/>
+				  		<img class="img-responsive" style="margin-bottom: 10px;" src="img/voyage-avion.jpg" alt="image carousel avion soleil"/>
+				  	</div>
+				  	<!-- form option length selection -->
+					<form action="" method="post">
+						<!-- select number days -->
+					    <div class="form-group">
+					    	<div class="row">
+						    	<div class="col-md-6">
+									<label>Nombre de jours</label>
+								</div>
+								<div class="col-md-4">
+									<input type="number" id="qte" class="form-control" min="1" max="20" value="1" onchange="calculMontant()"/>
+								</div>
+							</div>	
+						</div>
+						<!-- end select number days -->
+						<input type="hidden" name="prixUnitaire" id="prixUnitaire" value="10">
+						<!-- display total amount -->
+						<div class="form-group">
+					    	<div class="row">
+						    	<div class="col-md-6">
+									<label>Prix total</label>
+								</div>
+								<div class="col-md-4">
+									<input type="text" class="form-control" name="montant" id="montant" value="10 €"/>
+								</div>
+							</div>	
+						</div>
+						<!-- end display total amount -->
+						<!-- cards pictures -->
+						<div class="form-group text-center">
+					    	<img src="img/cards.png" alt="types carte bancaires"/>
+						</div>	
+						<!-- end cards pictures -->					
+					</form>
+					<!-- end form option length selection -->
+				  </div>
+				</div>
+			</div>	
+			<!-- end booking info -->
+			<div class="clear"></div>
+		
+			<footer>
+				<div class="footer text-center">
+					<p style="color: white; margin-top: 40px;">Propulsed by Optionizr</p>
+				</div>
+			</footer>
+		</div>
+		<!-- end main container -->
+		
+
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="owl-carousel/owl.carousel.min.js"></script>
+		<script type="text/javascript">
+		 
+		function calculMontant(){ 
+	    	var qte = $('#qte').val();
+	        var prixUnitaire = $('#prixUnitaire').val();
+	        var montantTotal = prixUnitaire * qte;
+	        $('#montant').val(montantTotal + ' €');
+        }
+
+		$(function(){
+
+			$('.carousel').owlCarousel({
+				items: 2,
+				margin: 5,
+				autoplay: true,
+				autoplayTimeout: 3000
+			});
+
+		});
+	 
+	    </script>
+	</body>
+</html>
