@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      body {
+        margin: 0;
+      }
+      #gauche {
+        float: left;
+        width: 70%;
+        height: 1000px;
+        background-color: #EFECCA;
+      }
+      #droite {
+        background-color: #CEFFF8;
+        height: 1000px;
+        padding : 10px;
+        padding-left: 71%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gauche">
+    </div>
+    <div id="droite">
+      Utilisez ces boutons pour créer votre formulaire<br><br>
+      <button id="btn-label">Label</button>
+      <button id="btn-text">Zone de texte</button>
+      <button id="btn-bouton">Bouton</button>
+      <hr>  
+      <br /> 
+
+
+      <div class="form-label">
+        <label for="form-label">Texte du label</label>
+        <input type="text" id="text-label"/>
+        <button id="submit-label">OK</button> 
+      </div>
+
+      <div class="form-text">
+        <label for="form-label">Id de la zone de texte</label>
+        <input type="text" id="text-id"/>
+        <button id="submit-id">OK</button> 
+      </div>
+
+      <div class="form-bouton">
+        <label for="form-label">Texte du bouton</label>
+        <input type="text" id="text-btn"/>
+        <button id="submit-btn">OK</button> 
+      </div>
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

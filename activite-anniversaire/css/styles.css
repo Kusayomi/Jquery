@@ -1,0 +1,45 @@
+/* NO COMMENT le fichier est relativement simple */
+#list_section
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+h1
+{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    border: solid 2px;
+    border-radius: 20px;
+    background-color: aqua;
+    padding: 5px;
+    font-size: 35px;
+    margin-bottom: 55px;
+    margin-top: 8% ;
+}
+.item
+{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    border: solid 2px;
+    padding: 5px;
+    font-size: 23px;
+    margin-bottom: 45px;
+}
+
+#msg1
+{
+    display: none;
+    background-color: #e67e22;
+}
+#msg2
+{
+    display: none;
+    background-color: #a66bbe;
+}
+#msg3
+{
+    display: none;
+    background-color: #e74c3c;
+}
